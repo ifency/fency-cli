@@ -2,9 +2,8 @@
   "name": "fency-cli",
   "version": "1.0.0",
   "description": "脚手架工具",
-  "main": "index.js",
   "bin": {
-    "fe-cli": "./bin/easycli.js"
+    "fe-cli": "./bin/cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
