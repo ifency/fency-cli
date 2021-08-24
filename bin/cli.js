@@ -26,7 +26,7 @@ program
                 red(`🆘 您已经终止此操作 🆘`)         
             }
         }).catch(err=>{
-            console.log("🚀 ~ file: cli.js ~ line 27 ~ inquirer.prompt ~ err", err)
+            // console.log("🚀 ~ file: cli.js ~ line 27 ~ inquirer.prompt ~ err", err)
             red(`❌ 程序出错 ❌`)
             process.exit(1);
         })
@@ -39,6 +39,9 @@ program
   .action(function(){
     inquirer.prompt(question.pushGit).then(answer=>{
       git.push(answer.url)
+    }).catch(err=>{
+        red(`❌ 程序出错 ❌`)
+        process.exit(1);
     })
   })
 
