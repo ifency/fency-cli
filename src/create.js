@@ -1,10 +1,3 @@
-/*
- * @Author: xll
- * @Date: 2021-05-24 14:04:24
- * @LastEditors: xll
- * @LastEditTime: 2021-05-24 15:24:20
- * @Description: 
- */
 const download = require('download-git-repo')
 const ora = require('ora')
 const fse = require('fs-extra')
@@ -14,7 +7,6 @@ const myChalk = require('../utils/chalk')
 const { red, yellow, green } = myChalk
 
 function createProject(project) {
-    console.log("🚀 ~ file: create.js ~ line 17 ~ createProject ~ project", project)
     //获取用户输入，选择的信息
   const { template, name, desc } = project;
 

@@ -22,7 +22,7 @@ const create = [
   },{
     name:'desc',
     message:'💬 请输入项目的描述:',
-    when:res=>Boolean(res.conf)
+    when:res => Boolean(res.conf)
   },{
       name:'template',
       type:'list',
@@ -42,38 +42,36 @@ const create = [
       filter:function(val){
         return val.toLowerCase()
       },
-      when: res =>{
-        // console.log("🚀 ~ file: question.js ~ line 47 ~ res", res)
-        Boolean(res.conf)
-      } 
+      when: res => Boolean(res.conf)
   }
 ]
 
-const git=[
-  {
-    name:'username',
-    type:'input',
-    message:'请输入您的gitlab邮箱地址:',
-    validate:function(val){
-      if(!val){
-        return '亲，请输入您的邮箱地址哦，不然访问不到～'
-      }
-      return true
-    }
-  },
-  {
-    name:'password',
-    type:'password',
-    message:'请输入您的密码:',
-    validate:function(val){
-      if(!val){
-        return '亲，您还没输入你的密哦～'
-      }
-      return true
-    },
-    // when: res => Boolean(res.conf)
-  }
-]
+// const git=[
+//   {
+//     name:'username',
+//     type:'input',
+//     message:'请输入您的gitlab邮箱地址:',
+//     validate:function(val){
+//       if(!val){
+//         return '亲，请输入您的邮箱地址哦，不然访问不到～'
+//       }
+//       return true
+//     }
+//   },
+//   {
+//     name:'password',
+//     type:'password',
+//     message:'请输入您的密码:',
+//     validate:function(val){
+//       if(!val){
+//         return '亲，您还没输入你的密哦～'
+//       }
+//       return true
+//     },
+//     // when: res => Boolean(res.conf)
+//   }
+// ]
+//推送git仓库
 const pushGit=[
   {
     name:'url',
@@ -84,6 +82,6 @@ const pushGit=[
 
 module.exports={
   create,
-  git,
+//   git,
   pushGit
 }
